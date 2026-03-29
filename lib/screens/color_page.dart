@@ -5,19 +5,55 @@ import 'package:tuko_app/models/number_model.dart';
 
 class ColorPage extends StatelessWidget {
   const ColorPage({super.key});
-final List<number> numberList =const[
-  number(jpname: "ichi", enname: "black", image: "assets/images/colors/color_black.png"),
-  number(jpname: "Ni", enname: "brown", image: "assets/images/colors/color_brown.png"),
-  number(jpname: "San", enname: "dusty yellow", image: "assets/images/colors/color_dusty_yellow.png"),
-  number(jpname: "Shi", enname: "gray", image: "assets/images/colors/color_gray.png"),
-  number(jpname: "Go", enname: "green", image: "assets/images/colors/color_green.png"),
-  number(jpname: "Roku", enname: "red", image: "assets/images/colors/color_red.png"),
-  number(jpname: "Shichi", enname: "white", image: "assets/images/colors/color_white.png"),
-  number(jpname: "Hachi", enname: "yellow", image: "assets/images/colors/yellow.png"),
-   number(jpname: "Roku", enname: "red", image: "assets/images/colors/color_red.png"),
-  number(jpname: "Shichi", enname: "white", image: "assets/images/colors/color_white.png"),
-  number(jpname: "Hachi", enname: "yellow", image: "assets/images/colors/yellow.png"),
-
+final List<item> colorList = const [
+  item(
+    jpname: "Kuro",
+    enname: "black",
+    image: "assets/images/colors/color_black.png",
+    sound: "sounds/colors/black.wav",
+  ),
+  item(
+    jpname: "Chairo",
+    enname: "brown",
+    image: "assets/images/colors/color_brown.png",
+    sound: "sounds/colors/brown.wav",
+  ),
+  item(
+    jpname: "Hokori ppoi kiiro",
+    enname: "dusty yellow",
+    image: "assets/images/colors/color_dusty_yellow.png",
+    sound: "sounds/colors/dusty yellow.wav",
+  ),
+  item(
+    jpname: "Haiiro",
+    enname: "gray",
+    image: "assets/images/colors/color_gray.png",
+    sound: "sounds/colors/gray.wav",
+  ),
+  item(
+    jpname: "Midori",
+    enname: "green",
+    image: "assets/images/colors/color_green.png",
+    sound: "sounds/colors/green.wav",
+  ),
+  item(
+    jpname: "Aka",
+    enname: "red",
+    image: "assets/images/colors/color_red.png",
+    sound: "sounds/colors/red.wav",
+  ),
+  item(
+    jpname: "Shiro",
+    enname: "white",
+    image: "assets/images/colors/color_white.png",
+    sound: "sounds/colors/white.wav",
+  ),
+  item(
+    jpname: "Kiiro",
+    enname: "yellow",
+    image: "assets/images/colors/yellow.png",
+    sound: "sounds/colors/yellow.wav",
+  ),
 ];
   @override
   Widget build(BuildContext context) {
@@ -35,9 +71,9 @@ final List<number> numberList =const[
         ),
         body: ListView.builder(
           physics: BouncingScrollPhysics(),
-            itemCount: numberList.length,
+            itemCount: colorList.length,
             itemBuilder:(context, index){
-              return NumberItem(const Color(0xff854DAC),numberList[index]);
+              return NumberItem(const Color(0xff854DAC),colorList[index]);
             }  
             ,) 
           
